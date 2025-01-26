@@ -1,9 +1,8 @@
 import type React from "react"
 import { Moon, Sun } from "lucide-react"
-import { useTheme } from "./theme-provider"
 
 export const ThemeSwitcher: React.FC = () => {
-  const { theme, setTheme } = useTheme()
+  const theme = "lavendarDawn";
 
   const toggleTheme = () => {
     setTheme(theme === "lavenderMoon" ? "lavenderDawn" : "lavenderMoon")

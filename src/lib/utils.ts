@@ -1,6 +1,6 @@
 
 
 export function cn(...inputs: any[]) {
-  return inputs;
+  return inputs.join(" ");
 }
 
