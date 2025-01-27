@@ -1,8 +1,8 @@
-import { ThemeProvider } from "../src/theme-provider";
-import "../src/index.css";
+// import { ThemeProvider } from "../src/theme-provider";
+import "../output.css";
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  // actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -25,11 +25,11 @@ export const globalTypes = {
 
 const withThemeProvider = (Story, context) => {
   return (
-    <ThemeProvider>
+    // <ThemeProvider>
       <div className={context.globals.theme}>
         <Story {...context} />
       </div>
-    </ThemeProvider>
+    // </ThemeProvider>
   )
 }
 

@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Meta, Story } from "@storybook/react"
+import type { Meta, StoryFn } from "@storybook/react"
 import { AccountOverview } from "../ui/account-overview"
 
 export default {
@@ -10,7 +10,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<React.ComponentProps<typeof AccountOverview>> = (args) => <AccountOverview {...args} />
+const Template: StoryFn<React.ComponentProps<typeof AccountOverview>> = (args) => <AccountOverview {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

@@ -1,9 +1,8 @@
-import React from "react"
-import type { Meta, Story } from "@storybook/react"
+import type { Meta, StoryFn } from "@storybook/react"
 import { AccountInfo, type AccountInfoProps } from "..//ui/account-info"
 import { BanknoteIcon as Bank, CreditCard, TrendingUp, TrendingDown, Wallet } from "lucide-react"
 import { Card, CardContent } from "../ui/card"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../ui/core/accordion"
+import { Accordion } from "../ui/core/accordion"
 
 export default {
   title: "Components/AccountInfo",
@@ -13,7 +12,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<AccountInfoProps> = (args) => (
+const Template: StoryFn<AccountInfoProps> = (args) => (
   <div className="w-[400px]">
     <Card>
       <CardContent>
@@ -65,9 +64,9 @@ FidelityInvestment.args = {
   description: "Investment ****9981",
 }
 
-const AccordionTemplate: Story<AccountInfoProps> = (args) => (
+const AccordionTemplate: StoryFn<AccountInfoProps> = (args) => (
   <div className="w-[400px]">
-    <Accordion header={<AccountInfo {...args} showChevron />}>
+    <Accordion header={<AccountInfo {...args} />}>
       <p>Additional details about the account...</p>
     </Accordion>
   </div>

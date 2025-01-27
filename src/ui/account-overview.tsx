@@ -1,7 +1,5 @@
 import type React from "react"
-import { cn } from "../lib/utils"
 import { TrendingUp } from "lucide-react"
-import { useTheme } from "../theme-provider"
 
 interface AccountOverviewProps {
   /** The current account balance */
@@ -15,8 +13,8 @@ interface AccountOverviewProps {
 /**
  * AccountOverview component displaying the total balance and percentage change
  */
-export const AccountOverview: React.FC<AccountOverviewProps> = ({ balance, percentageChange, className }) => {
-  const theme = "lavendarDawn";
+export const AccountOverview: React.FC<AccountOverviewProps> = ({ balance, percentageChange }) => {
+  // const theme = "lavenderDawn";
   const formattedBalance = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -29,7 +27,7 @@ export const AccountOverview: React.FC<AccountOverviewProps> = ({ balance, perce
   }).format(percentageChange / 100)
 
   return (
-    <div className={cn(`w-full bg-${theme}-iris rounded-2xl p-6 text-${theme}-base`, className)}>
+    <div className={`w-full bg-lavenderDawn-iris rounded-2xl p-6 text-lavenderDawn-base`}>
       <div className="space-y-2">
         <p className="text-sm opacity-90">Total Balance</p>
         <p className="text-2xl font-bold">{formattedBalance}</p>

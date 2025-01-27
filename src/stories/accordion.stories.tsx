@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Story, Meta } from "@storybook/react";
-import { Accordion, AccordionProps } from "../ui/core/accordion"; // Adjust the import path as needed
-import { ChevronDown, ChevronUp, Star } from "lucide-react";
+import { useState } from "react";
+import { StoryFn, Meta } from "@storybook/react";
+import { Accordion } from "../ui/core/accordion"; // Adjust the import path as needed
+import { Star } from "lucide-react";
 
 export default {
   title: "Components/Accordion",
   component: Accordion,
 } as Meta;
 
-const Template: Story<AccordionProps> = (args) => (
+const Template: StoryFn<any> = (args:any) => (
   <>
     <Accordion {...args} header="Accordion 1">
       <div>

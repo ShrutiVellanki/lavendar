@@ -2,7 +2,6 @@ import type React from "react"
 import { useState } from "react"
 import { Home, PieChart, ArrowLeftRight, User } from "lucide-react"
 import { cn } from "../lib/utils"
-import { useTheme } from "../theme-provider"
 import { PageNotAvailablePopup } from "./page-not-available-popup"
 
 interface FooterItemProps {
@@ -13,14 +12,14 @@ interface FooterItemProps {
 }
 
 const FooterItem: React.FC<FooterItemProps> = ({ icon, label, isActive, onClick }) => {
-  const theme = "lavendarDawn";
+  // const theme = "lavenderDawn";
   return (
     <button
-      className={`flex flex-col items-center gap-1 focus:outline-none focus:ring-2 focus:ring-${theme}-pine rounded-lg p-2`}
+      className={`flex flex-col items-center gap-1 focus:outline-none focus:ring-2 focus:ring-lavenderDawn-pine rounded-lg p-2`}
       onClick={onClick}
     >
-      <div className={cn("h-5 w-5", isActive ? `text-${theme}-pine` : `text-${theme}-subtle`)}>{icon}</div>
-      <div className={cn("text-xs", isActive ? `text-${theme}-pine` : `text-${theme}-subtle`)}>{label}</div>
+      <div className={cn("h-5 w-5", isActive ? `text-lavenderDawn-pine` : `text-lavenderDawn-subtle`)}>{icon}</div>
+      <div className={cn("text-xs", isActive ? `text-lavenderDawn-pine` : `text-lavenderDawn-subtle`)}>{label}</div>
     </button>
   )
 }
@@ -30,7 +29,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onHomeClick }) => {
-  const theme = "lavendarDawn";
+  // const theme = "lavenderDawn";
   const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   const handleUnavailableClick = () => {
@@ -40,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onHomeClick }) => {
   return (
     <>
       <footer
-        className={`w-full h-16 px-6 py-3 bg-${theme}-surface border-t border-${theme}-overlay flex justify-center items-center`}
+        className={`w-full h-16 px-6 py-3 bg-lavenderDawn-surface border-t border-lavenderDawn-overlay flex justify-center items-center`}
       >
         <div className="w-full max-w-screen-xl flex justify-between items-start">
           <FooterItem icon={<Home />} label="Home" isActive onClick={onHomeClick} />

@@ -9,9 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "npx tailwindcss -i ./src/index.css -o ./output.css && storybook build"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
     "lucide-react": "^0.474.0",
     "next-themes": "^0.4.4",
     "postcss-cli": "^11.0.0",

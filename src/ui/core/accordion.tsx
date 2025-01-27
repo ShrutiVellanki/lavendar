@@ -24,10 +24,11 @@ export const Accordion: React.FC<AccordionProps> = ({
   contentClassName,
 }) => {
   const [uncontrolledIsOpen, setUncontrolledIsOpen] = useState(false);
-  const theme = "lavendarDawn";
+  // const theme = "lavenderDawn";
 
   const isControlled = controlledIsOpen !== undefined;
   const isOpen = isControlled ? controlledIsOpen : uncontrolledIsOpen;
+  console.log(isOpen);
 
   const handleToggle = () => {
     if (isControlled) {
@@ -38,15 +39,15 @@ export const Accordion: React.FC<AccordionProps> = ({
   };
 
   const variantClasses = {
-    default: `border-${theme}-overlay text-${theme}-text`,
-    secondary: `border-${theme}-muted text-${theme}-subtle`,
-    destructive: `border-${theme}-love text-${theme}-love`,
+    default: `border-lavenderDawn-overlay text-lavenderDawn-text`,
+    secondary: `border-lavenderDawn-muted text-lavenderDawn-subtle`,
+    destructive: `border-lavenderDawn-love text-lavenderDawn-love`,
   };
 
   return (
     <div className={`border rounded-lg overflow-hidden ${variantClasses[variant]}`}>
       <button
-        className={`w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-${theme}-pine focus:ring-opacity-50 ${headerClassName}`}
+        className={`w-full text-left p-4 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-lavenderDawn-pine focus:ring-opacity-50 ${headerClassName}`}
         onClick={handleToggle}
       >
         <div className="flex-grow">{header}</div>
@@ -59,9 +60,9 @@ export const Accordion: React.FC<AccordionProps> = ({
         )}
       </button>
       <div
-        className={`transition-max-height duration-300 ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"} overflow-hidden ${contentClassName}`}
+        className={`transition-max-height duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-screen" : "max-h-0"} ${contentClassName ?? ""}`}
       >
-        <div className="p-4 bg-${theme}-overlay">{children}</div>
+        <div className="p-4 bg-lavenderDawn-overlay">{children}</div>
       </div>
     </div>
   );

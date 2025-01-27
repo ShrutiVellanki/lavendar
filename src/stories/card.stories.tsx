@@ -1,4 +1,4 @@
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { Card, CardHeader, CardContent } from "../ui/card"; // Adjust the import path as needed
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: Card,
 } as Meta;
 
-const Template: Story<CardProps> = (args) => (
+const Template: StoryFn<any> = (args: any) => (
   <Card {...args}>
     <CardHeader>Card Header</CardHeader>
     <CardContent>

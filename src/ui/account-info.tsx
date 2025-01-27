@@ -1,6 +1,5 @@
 import type React from "react"
 import { cn } from "../lib/utils"
-import { useTheme } from "../theme-provider"
 
 export interface AccountInfoProps {
   name: string
@@ -16,10 +15,9 @@ export const AccountInfo: React.FC<AccountInfoProps> = ({
   logo,
   balance,
   description,
-  className,
   balanceColor,
 }) => {
-  const theme = "lavendarDawn";
+  // const theme = "lavenderDawn";
   const isNegative = balance < 0
   const formattedBalance = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -27,16 +25,16 @@ export const AccountInfo: React.FC<AccountInfoProps> = ({
   }).format(Math.abs(balance))
 
   return (
-    <div className={cn(`w-full flex items-center justify-between p-4`, className)}>
+    <div className={`w-full flex items-center justify-between p-4`}>
       <div className="flex items-center space-x-4">
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-${theme}-overlay`}>{logo}</div>
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-lavenderDawn-overlay`}>{logo}</div>
         <div className="flex flex-col items-start">
-          <span className={`font-medium text-${theme}-text`}>{name}</span>
-          {description && <span className={`text-sm text-${theme}-muted`}>{description}</span>}
+          <span className={`font-medium text-lavenderDawn-text`}>{name}</span>
+          {description && <span className={`text-sm text-lavenderDawn-muted`}>{description}</span>}
         </div>
       </div>
       <div className="flex items-center space-x-2">
-        <span className={cn("font-medium", balanceColor || (isNegative ? `text-${theme}-love` : `text-${theme}-pine`))}>
+        <span className={cn("font-medium", balanceColor || (isNegative ? `text-lavenderDawn-love` : `text-lavenderDawn-pine`))}>
           {isNegative && "-"}
           {formattedBalance}
         </span>
