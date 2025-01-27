@@ -1,45 +1,54 @@
-import type React from "react"
-import { Bell, User } from "lucide-react"
-import { useTheme } from "./theme-provider"
-import { ThemeSwitcher } from "./theme-switcher"
+import * as React from "react";
+import { useTheme } from "../theme-provider";
+import { UserGreeting } from "./user-greeting";
+import { NotificationBell } from "./notification-bell";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+} from "./navigation-menu"; // Adjust the import path as needed
 
 interface HeaderProps {
-  /** The name of the user */
-  userName: string
-  /** The URL of the user's profile image */
-  userImage?: string
+  userName: string;
 }
 
-/**
- * Header component displaying user information and a notification bell
- */
-export const Header: React.FC<HeaderProps> = ({ userName, userImage }) => {
+export const Header: React.FC<HeaderProps> = ({ userName }) => {
   const theme = "lavendarDawn";
 
   return (
-    <header
-      className={`w-full h-16 px-6 py-2 bg-${theme}-surface flex justify-between items-center fixed top-0 left-0 right-0 z-10 shadow-sm`}
-    >
-      <div className="flex items-center gap-2">
-        <div className={`w-10 h-10 rounded-full overflow-hidden bg-${theme}-overlay flex items-center justify-center`}>
-          {userImage ? (
-            <img className="w-full h-full object-cover" src={userImage || "/placeholder.svg"} alt={userName} />
-          ) : (
-            <User className={`w-6 h-6 text-${theme}-subtle`} />
-          )}
-        </div>
-        <div className="flex flex-col">
-          <div className={`text-lg font-semibold leading-tight text-${theme}-text`}>Hi, {userName}</div>
-          <div className={`text-sm text-${theme}-subtle leading-tight`}>Welcome back!</div>
-        </div>
+    <header className="flex items-center justify-between p-4 bg-white shadow-md">
+      <div className="flex items-center gap-4">
+        <UserGreeting userName={userName} theme={theme} />
       </div>
       <div className="flex items-center gap-4">
-        <ThemeSwitcher />
-        <div className={`w-8 h-8 bg-${theme}-overlay rounded-full flex items-center justify-center`}>
-          <Bell className={`w-4 h-4 text-${theme}-text`} />
-        </div>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="p-4 bg-white shadow-lg rounded-lg">
+                  <li>
+                    <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink href="#about">About</NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink href="#contact">Contact</NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+          <NavigationMenuIndicator />
+        </NavigationMenu>
+        <NotificationBell theme={theme} />
       </div>
     </header>
-  )
-}
-
+  );
+};

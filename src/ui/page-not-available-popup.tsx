@@ -1,6 +1,6 @@
 import type React from "react"
 import { X } from "lucide-react"
-import { useTheme } from "./theme-provider"
+import { useTheme } from "../theme-provider"
 
 interface PageNotAvailablePopupProps {
   isOpen: boolean

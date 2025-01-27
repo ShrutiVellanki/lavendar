@@ -3,7 +3,7 @@ import type { Meta, Story } from "@storybook/react"
 import { AccountInfo, type AccountInfoProps } from "..//ui/account-info"
 import { BanknoteIcon as Bank, CreditCard, TrendingUp, TrendingDown, Wallet } from "lucide-react"
 import { Card, CardContent } from "../ui/card"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../ui/accordion"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../ui/core/accordion"
 
 export default {
   title: "Components/AccountInfo",

@@ -1,6 +1,6 @@
 import type React from "react"
 import { cn } from "../lib/utils"
-import { useTheme } from "./theme-provider"
+import { useTheme } from "../theme-provider"
 
 export interface AccountInfoProps {
   name: string

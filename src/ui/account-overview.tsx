@@ -1,7 +1,7 @@
 import type React from "react"
 import { cn } from "../lib/utils"
 import { TrendingUp } from "lucide-react"
-import { useTheme } from "./theme-provider"
+import { useTheme } from "../theme-provider"
 
 interface AccountOverviewProps {
   /** The current account balance */

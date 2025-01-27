@@ -2,7 +2,7 @@ import type React from "react"
 import { useState } from "react"
 import { Home, PieChart, ArrowLeftRight, User } from "lucide-react"
 import { cn } from "../lib/utils"
-import { useTheme } from "./theme-provider"
+import { useTheme } from "../theme-provider"
 import { PageNotAvailablePopup } from "./page-not-available-popup"
 
 interface FooterItemProps {
