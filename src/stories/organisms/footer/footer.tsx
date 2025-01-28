@@ -2,7 +2,6 @@ import type React from "react"
 import { useState } from "react"
 import { Home, PieChart, ArrowLeftRight, User } from "lucide-react"
 import { cn } from "../../../lib/utils"
-import { PageNotAvailablePopup } from "../../../ui/page-not-available-popup"
 
 interface FooterItemProps {
   icon: React.ReactNode
@@ -48,7 +47,6 @@ export const Footer: React.FC<FooterProps> = ({ onHomeClick }) => {
           <FooterItem icon={<User />} label="Profile" onClick={handleUnavailableClick} />
         </div>
       </footer>
-      <PageNotAvailablePopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>
   )
 }

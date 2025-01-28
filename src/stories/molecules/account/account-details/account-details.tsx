@@ -19,8 +19,8 @@ export const AccountDetails: React.FC<AccountDetailsProps> = ({
 }) => {
   // const theme = "lavenderDawn";
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
+    <div className="w-full min-w-4xl space-y-4">
+      <div className="justify-between items-center">
         <h3 className={`text-lg font-semibold text-lavenderDawn-text`}>{accountType}</h3>
         <p className={`text-lavenderDawn-muted`}>Account: {accountNumber}</p>
       </div>

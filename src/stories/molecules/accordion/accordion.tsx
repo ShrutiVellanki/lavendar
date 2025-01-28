@@ -2,17 +2,34 @@ import type React from "react";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
+/**
+ * Props for the Accordion component.
+ */
 interface AccordionProps {
+  /** The content to be displayed in the accordion header. */
   header: React.ReactNode;
+  /** The content to be displayed inside the accordion when it is expanded. */
   children: React.ReactNode;
+  /** An optional icon to be displayed in the accordion header. */
   icon?: React.ReactNode;
+  /** A boolean to control the open/close state of the accordion. If provided, the component operates in controlled mode. */
   isOpen?: boolean;
+  /** A callback function to be called when the accordion is toggled. */
   onToggle?: () => void;
+  /** The variant of the accordion, which determines its styling. Default is "default". */
   variant?: "default" | "secondary" | "destructive";
+  /** Additional class names for the header. */
   headerClassName?: string;
+  /** Additional class names for the content. */
   contentClassName?: string;
 }
 
+/**
+ * Accordion component to display collapsible content sections.
+ *
+ * @param {AccordionProps} props - The props for the Accordion component.
+ * @returns {JSX.Element} The rendered Accordion component.
+ */
 export const Accordion: React.FC<AccordionProps> = ({
   header,
   children,
@@ -24,11 +41,9 @@ export const Accordion: React.FC<AccordionProps> = ({
   contentClassName,
 }) => {
   const [uncontrolledIsOpen, setUncontrolledIsOpen] = useState(false);
-  // const theme = "lavenderDawn";
 
   const isControlled = controlledIsOpen !== undefined;
   const isOpen = isControlled ? controlledIsOpen : uncontrolledIsOpen;
-  console.log(isOpen);
 
   const handleToggle = () => {
     if (isControlled) {

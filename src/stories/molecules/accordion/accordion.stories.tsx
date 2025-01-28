@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StoryFn, Meta } from "@storybook/react";
 import { Accordion } from "./accordion"; // Adjust the import path as needed
 import { Star } from "lucide-react";
+import { Button } from "../../atoms/buttons/button";
 
 export default {
   title: "Molecules/Accordion",
@@ -56,18 +57,14 @@ export const Controlled = () => {
 
   return (
     <>
-      <button
-        onClick={() => toggleAll(true)}
-        className="mb-4 px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        Expand All
-      </button>
-      <button
-        onClick={() => toggleAll(false)}
-        className="mb-4 ml-2 px-4 py-2 bg-red-500 text-white rounded"
-      >
-        Collapse All
-      </button>
+      <div className="mb-4 space-x-4">
+        <Button onClick={() => toggleAll(true)} variant="primary" size="md">
+          Expand All
+        </Button>
+        <Button onClick={() => toggleAll(false)} variant="secondary" size="md">
+          Collapse
+        </Button>
+      </div>
       <Accordion
         header="Controlled Accordion 1"
         isOpen={isOpen1}
