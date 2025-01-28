@@ -1,8 +1,8 @@
 import type React from "react"
 import { useState } from "react"
 import { Home, PieChart, ArrowLeftRight, User } from "lucide-react"
-import { cn } from "../lib/utils"
-import { PageNotAvailablePopup } from "./page-not-available-popup"
+import { cn } from "../../../lib/utils"
+import { PageNotAvailablePopup } from "../../../ui/page-not-available-popup"
 
 interface FooterItemProps {
   icon: React.ReactNode

@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Meta, StoryFn } from "@storybook/react"
-import { AccountDetails } from "../ui/account-details"
+import { AccountDetails } from "./account-details"
 
 export default {
-  title: "Components/AccountDetails",
+  title: "Molecules/Account/AccountDetails",
   component: AccountDetails,
   parameters: {
     layout: "centered",

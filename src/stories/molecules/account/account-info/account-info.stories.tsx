@@ -1,11 +1,11 @@
 import type { Meta, StoryFn } from "@storybook/react"
-import { AccountInfo, type AccountInfoProps } from "..//ui/account-info"
+import { AccountInfo, type AccountInfoProps } from "./account-info"
 import { BanknoteIcon as Bank, CreditCard, TrendingUp, TrendingDown, Wallet } from "lucide-react"
-import { Card, CardContent } from "../ui/card"
-import { Accordion } from "../ui/core/accordion"
+import { Card, CardContent } from "../../card/card"
+import { Accordion } from "../../accordion/accordion"
 
 export default {
-  title: "Components/AccountInfo",
+  title: "Molecules/Account/AccountInfo",
   component: AccountInfo,
   parameters: {
     layout: "centered",

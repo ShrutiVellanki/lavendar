@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Meta, StoryFn } from "@storybook/react"
-import { Header } from "../ui/header"
+import { Header } from "./header"
 
 export default {
-  title: "Components/Header",
+  title: "Organisms/Header",
   component: Header,
   parameters: {
     layout: "fullscreen",

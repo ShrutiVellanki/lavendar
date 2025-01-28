@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Meta, StoryFn } from "@storybook/react"
-import { AccountOverview } from "../ui/account-overview"
+import { AccountOverview } from "./account-overview"
 
 export default {
-  title: "Components/AccountOverview",
+  title: "Molecules/Account/AccountOverview",
   component: AccountOverview,
   parameters: {
     layout: "centered",

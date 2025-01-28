@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   // const theme = "lavenderDawn";
-
+ 
   const baseStyles = "font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-opacity-50"
   const variantStyles = {
     primary: `bg-lavenderDawn-iris text-lavenderDawn-base hover:bg-lavenderDawn-love`,

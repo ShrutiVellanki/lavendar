@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { StoryFn, Meta } from "@storybook/react";
-import { Accordion } from "../ui/core/accordion"; // Adjust the import path as needed
+import { Accordion } from "./accordion"; // Adjust the import path as needed
 import { Star } from "lucide-react";
 
 export default {
-  title: "Components/Accordion",
+  title: "Molecules/Accordion",
   component: Accordion,
 } as Meta;
 

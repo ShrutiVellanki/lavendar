@@ -1,8 +1,8 @@
 import { StoryFn, Meta } from "@storybook/react";
-import { Card, CardHeader, CardContent } from "../ui/card"; // Adjust the import path as needed
+import { Card, CardHeader, CardContent } from "./card"; // Adjust the import path as needed
 
 export default {
-  title: "Components/Card",
+  title: "Molecules/Card",
   component: Card,
 } as Meta;
 
