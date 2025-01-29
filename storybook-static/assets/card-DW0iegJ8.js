@@ -1,0 +1,10 @@
+import{j as d}from"./jsx-runtime-z8MfsBtr.js";import{r as n}from"./index-DvCGLPYa.js";import{c as o}from"./utils-oBlX3nyX.js";const s=n.forwardRef(({className:e,children:r,...a},t)=>d.jsx("div",{ref:t,className:o("rounded-lg border bg-card text-card-foreground shadow-sm",e),...a,children:r}));s.displayName="Card";const c=n.forwardRef(({className:e,children:r,...a},t)=>d.jsx("div",{ref:t,className:o("flex flex-col space-y-1.5 p-6",e),...a,children:r}));c.displayName="CardHeader";const p=n.forwardRef(({className:e,children:r,...a},t)=>d.jsx("div",{ref:t,className:o("p-6",e),...a,children:r}));p.displayName="CardContent";s.__docgenInfo={description:`Card component to display content in a card layout.
+
+@param {CardProps} props - The props for the Card component.
+@returns {JSX.Element} The rendered Card component.`,methods:[],displayName:"Card",props:{className:{required:!1,tsType:{name:"string"},description:"Additional class names for the card."},children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:"The content to be displayed inside the card."}}};c.__docgenInfo={description:`CardHeader component to display the header of the card.
+
+@param {CardHeaderProps} props - The props for the CardHeader component.
+@returns {JSX.Element} The rendered CardHeader component.`,methods:[],displayName:"CardHeader",props:{className:{required:!1,tsType:{name:"string"},description:"Additional class names for the card header."},children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:"The content to be displayed inside the card header."}}};p.__docgenInfo={description:`CardContent component to display the content of the card.
+
+@param {CardContentProps} props - The props for the CardContent component.
+@returns {JSX.Element} The rendered CardContent component.`,methods:[],displayName:"CardContent",props:{className:{required:!1,tsType:{name:"string"},description:"Additional class names for the card content."},children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:"The content to be displayed inside the card content."}}};export{s as C,c as a,p as b};
